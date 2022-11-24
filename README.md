@@ -26,6 +26,8 @@ Things you may want to cover:
 https://guides.railsgirls.com/devise
 https://medium.com/@_benrudolph/end-to-end-devise-omniauth-google-api-rails-7f432b38ed75 
 
+https://dev.to/danielpenaloza/omniauth-devise-rails-tutorial-5ddi
+
 # Devise Curl
 
 Register
