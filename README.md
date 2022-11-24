@@ -28,9 +28,15 @@ https://medium.com/@_benrudolph/end-to-end-devise-omniauth-google-api-rails-7f43
 
 https://dev.to/danielpenaloza/omniauth-devise-rails-tutorial-5ddi
 
+rspec
+https://www.matthewhoelter.com/2019/09/12/setting-up-and-testing-rails-6.0-with-rspec-factorybot-and-devise.html
+https://blog.devgenius.io/testing-a-rails-api-with-rspec-82dedc9f15df
+
 # Devise Curl
 
 Register
+
+
 
 ```shell
 curl -XPOST -H "Content-Type: application/json" -d '{ "user": { "email": "myemail8@email.com", "password": "mypassword1", "password_confirmation" : "mypassword1"} }' http://localhost:3001/users.json -i

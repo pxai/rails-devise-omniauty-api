@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root to: "home#index"
+  get '/', to: "home#index"
+  get '/restricted', to: 'restricted#index'
   devise_for :users, controllers: {
     omniauth_callbacks: 'users/omniauth_callbacks',
     sessions: 'users/sessions'
