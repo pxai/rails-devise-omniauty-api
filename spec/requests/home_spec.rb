@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe 'Posts', type: :request do
+RSpec.describe 'Home', type: :request do
   describe 'GET /index' do
     before do
-      get '/'
+      get root_url
     end
     
     it 'returns status code 200' do
