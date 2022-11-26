@@ -14,7 +14,7 @@ RSpec.describe 'Sign Out', type: :request do
         expect(response).to have_http_status(:success)
         expect(response).to be_successful
 
-        expect(json['maf']).to_not eq('Session finished')
+        expect(json['msg']).to eq('Session finished')
       end
     end
   end

@@ -24,6 +24,9 @@ class Users::SessionsController < Devise::SessionsController
   # DELETE /resource/sign_out
   def destroy
      #super
+     puts current_user.inspect
+     sign_out
+     puts current_user.inspect
      render json: {msg: 'Session finished'}
   end
 
