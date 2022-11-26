@@ -7,19 +7,21 @@ RSpec.describe 'Restricted', type: :request do
     end
     
     it 'returns status code 302' do
-      expect(response).to have_http_status(:found)
+      json = JSON.parse(response.body)
+      expect(json['error']).to eq('You need to sign in or sign up before continuing.')
     end
   end
 
   describe 'GET /restricted with authentication' do
     let(:user) { FactoryBot.create(:user) }
     before do
-      login_as(user, :scope => :user)
+      login_as(user, :scope => :user, :run_callbacks => false) # this last callback is necessary
       get restricted_url
     end
     
     it 'returns status code 302' do
       expect(response).to have_http_status(:ok)
+      expect(json['msg']).to eq('ok, welcome to restricted')
     end
   end
 end
